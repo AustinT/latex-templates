@@ -1,3 +1,6 @@
+## Since this is just a templates project, no pdf files
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
