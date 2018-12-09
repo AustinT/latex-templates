@@ -1,0 +1,55 @@
+% This template is for the 1-page research proposal required by the "Canada Graduate Scholarships-Master’s Program"
+% Descriptions at: http://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_eng.asp
+% In particular, it has the right margins and uses a font like Times New Roman
+
+
+\documentclass[12pt]{article} % Note the 12pt font
+\usepackage{parskip}
+\pagestyle{empty}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{verbatim}
+
+% References
+\usepackage[
+backend=bibtex,
+sorting=none,         % Do not sort at all. All entries are processed in citation order.
+maxbibnames=99,
+url=false, % compress space TO THE MAX
+doi=false
+]{biblatex}
+\addbibresource{references.bib}
+
+% Make unicode display properly
+\usepackage[utf8]{inputenc}
+
+% Use font like Times New Roman
+\usepackage{mathptmx}
+
+\begin{document}
+
+\begin{center}
+	{\large\textbf{CGS-M Research Proposal | YOUR NAME | December X 20YY}}
+\end{center}
+
+\begin{comment}
+Plan out your paragraph in a comment
+\end{comment}
+An introduction here, to motivate your research.
+
+A second paragraph backs it up with some citations \cite{leshuk_petroleomic_2018}.
+Note that there are no hyperlinks since that is against the CGS-M's rules.
+
+End off with a solid conclusion, and references on the next page (again, no hyperlinks).
+
+\newpage
+\printbibliography
+
+\end{document}
+
+
+
+
+
