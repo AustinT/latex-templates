@@ -3,6 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr,verbatim,parskip}
 \usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{mathtools,amsmath,amssymb,amsfonts} % for math stuff
+
+% for code
+\usepackage{minted}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -10,11 +17,19 @@
 \lhead{COURSE NAME TODO}
 \rfoot{Page \thepage}
 
+% Optional: add word count info
+% Input the word count
+% \immediate\write18{detex \jobname | wc -w > \jobname_wordcount.txt}
+% \lfoot{{\input{\jobname_wordcount.txt}} words (using \texttt{detex})}
+
 % Potentially add a bibliography
 %\usepackage{biblatex}
 %\addbibresource{refs.bib}
 
 \begin{document}
+
+% Potentially include a cover sheet
+% \includepdf[pages={1}]{coversheet.pdf}
 	
 \begin{comment}
 I like to start with a block comment outline of what I will write about
@@ -23,6 +38,43 @@ I like to start with a block comment outline of what I will write about
 	
 \section*{Title}
 Some content, more content.
+
+Some code:
+\begin{minted}[tabsize=4,python3,breaklines]{python}	
+	import math
+	print(math.sqrt(2.0))
+\end{minted}
+
+Refer to a figure (Figure~\ref{fig:1}).
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\linewidth]{example-image-a}
+		\caption{a caption}
+		\label{fig:1}
+\end{figure}
+
+% Answer questions with letter numbers
+\begin{enumerate}[label=(\alph*)]
+	% =================================================================
+	% Part a
+	% =================================================================
+	\item\label{part-a}
+	
+	Part~\ref{part-a} refers to Figure~\ref{fig:1}.
+	
+	
+	
+	
+	
+	
+	% =================================================================
+	% Part b
+	% =================================================================
+	\newpage
+	\item\label{part-b}
+	Another answer.
+\end{enumerate}
+
 
 %\printbibliography
 
